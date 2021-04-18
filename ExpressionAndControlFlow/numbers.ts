@@ -1,4 +1,4 @@
-let a=5;
-let b=5;
+let aa=5;
+let bb=5;
 
-console.log(a+b);
+console.log(aa+bb);
