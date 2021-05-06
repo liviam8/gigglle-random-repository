@@ -1,10 +1,13 @@
+// -  Create a function called `printParams`
+//    which logs to the console the input parameters
+//    (can have multiple number of arguments)
+"use strict";
 
 
-function printparams (param1:string, param2: number);
-{
-    console.log (param1)
-    console.log (param2)
-
+function printParams(a,b,c,d,e,f){
+    for(let i: number = 0; i < arguments.length; i++){
+        console.log(arguments[i]);
+    }
 
 }
-printparams("elkelkáposztásítottalanítottátok", 3);
+printParams(1, 2, 3, 4, 5, 6);
