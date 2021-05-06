@@ -1,19 +1,20 @@
-const fs = require("fs");
+// Write a function that takes a filename as string,
+// then returns the number of lines the file contains.
+// It should return zero if it can't open the file, and
+// should not raise any error.
 
-const MY_ERROR_MESSAGE = "0";
-function fileCont(fileName: string) {
-  const fileContent = fs.readFileSync(fileName);
-  const lines = (fileContent.match(/\n/g) || "").length + 1;
-  console.log(lines);
-  return lines;
-}
+const fs = require('fs');
 
 try {
-  fileCont("readme.txt");
-  //throw "My error";
-} catch (error) {
-  //console.log(MY_ERROR_MESSAGE);
-  console.log(error.message);
+    let fileContent:string = fs.readFileSync('./my-file.txt', 'utf-8');
+    let nbLines = (fileContent.split("\n")).length
+    console.log(nbLines)
 }
 
-export {};
+catch(err){
+    if (err instanceof Error) {
+    console.log(0)
+    } 
+}
+
+export{}
